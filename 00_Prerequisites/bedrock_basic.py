@@ -6,10 +6,10 @@ import boto3
 import botocore
 
 # Set up the session
-session = boto3.Session(profile_name='choon')
+session = boto3.Session(profile_name='YOUR_AWS_PROFILE_NAME')
 sts_client = session.client('sts')
 bedrock_assume_role = sts_client.assume_role(
-    RoleArn="arn:aws:iam::975049940746:role/starbucks-bedrock-assume-role",
+    RoleArn="arn:aws:iam::YOUR_AWS_ACCOUNT_ID:role/YOUR_ASSUME_ROLE_NAME",
     RoleSessionName="bedrock-session"
 )
 
@@ -27,6 +27,7 @@ bedrock_runtime = boto3.client('bedrock-runtime',
     aws_session_token=bedrock_assume_role['Credentials']['SessionToken']
 )
 
+# AWS Bedrock 모델을 호출하여 텍스트를 생성하는 함수
 def invoke_bedrock_model(bedrock_runtime, 
                          prompt_text, 
                          model_id="amazon.titan-text-express-v1", 
