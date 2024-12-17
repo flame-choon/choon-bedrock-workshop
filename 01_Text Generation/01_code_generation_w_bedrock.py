@@ -14,6 +14,8 @@ bedrock_assume_role = sts_client.assume_role(
     RoleSessionName="bedrock-session"
 )
 
+print(bedrock_assume_role)
+
 # Create the Bedrock client
 bedrock_runtime = boto3.client('bedrock-runtime',
     region_name='us-east-1',
