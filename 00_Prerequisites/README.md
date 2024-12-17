@@ -1,9 +1,7 @@
 # 0 - Prerequisites
 
 이번 단계에서는 Python과 Boto3 라이브러리를 이용하여 AWS Bedrock 서비스에 접근 하는 테스트용 코드들을 작성하였다.
-이 코드는 N.Virginia(us-east-1) 리전 대상으로 작성한 코드이다.
-
-[완성 된 코드](bedrock_basic.py)를 참고하면 된다.
+이 코드는 N.Virginia(us-east-1) 리전 대상으로 작성한 코드이며 [완성 된 코드](bedrock_basic.py)를 참고하면 된다.
 
 ## CHECK
 완성 된 코드를 정상적으로 돌리기 위해선 아래의 사항을 만족해야 한다
